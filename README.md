@@ -1,10 +1,16 @@
 # Ripple — Supply-chain risk explorer
 
-**Live demo: [graph-application.vercel.app](https://graph-application.vercel.app/)**
+**Live demo: [graph-application.vercel.app](https://graph-application.vercel.app/)** · **Video walkthrough: [demo.mp4](https://graph-application.vercel.app/demo.mp4)**
 
 A graph-powered supply-chain risk explorer built on **CognoDB Cloud** (openCypher over Bolt, official Neo4j drivers). It models a fictional chocolate & snack maker — *Ambrosia Foods* — and its multi-tier supply chain, and answers the question every operations team dreads:
 
 > **"If this factory, supplier, or region goes down — which products stop shipping, how does the damage propagate, and where are our hidden single points of failure?"**
+
+## Demo
+
+[![Watch the demo — take the sole cocoa processor offline and watch all 15 products stop shipping](docs/screenshots/blast-radius.png)](https://graph-application.vercel.app/demo.mp4)
+
+*▶ Click the image to watch the 50-second narrated walkthrough ([demo.mp4](public/demo.mp4), 4K).*
 
 ![The Ripple explorer](docs/screenshots/explorer.png)
 
