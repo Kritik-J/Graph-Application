@@ -10,7 +10,7 @@ A graph-powered supply-chain risk explorer built on **CognoDB Cloud** (openCyphe
 
 ![Disruption simulation: the sole cocoa processor goes offline](docs/demo-preview.gif)
 
-Full version: [demo video](https://graph-application.vercel.app/demo.mp4) (50s, with narration).
+Full version: [demo video](https://graph-application.vercel.app/demo.mp4).
 
 ![The Ripple explorer](docs/screenshots/explorer.png)
 
