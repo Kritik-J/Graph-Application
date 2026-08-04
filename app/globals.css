@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Ripple — "Modernist" palette */
+  --color-paper: #f3f2f2;
+  --color-surface: #eae9e9;
+  --color-ink: #201e1d;
+
+  --color-accent: #ec3013;
+  --color-accent-700: #ae1800;
+  --color-accent-200: #ffe0d9;
+  --color-accent-100: #fff2ef;
+
+  --color-n-50: #f8f4f4;
+  --color-n-100: #eae7e7;
+  --color-n-200: #d7d3d3;
+  --color-n-300: #bab6b6;
+  --color-n-400: #9b9797;
+  --color-n-500: #7d7979;
+  --color-n-600: #605d5d;
+  --color-n-700: #444141;
+  --color-n-800: #2d2b2b;
+
+  --color-ok: #1f7a4d;
+
+  /* Every structural line in the UI resolves to this. */
+  --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
+
+  --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Modernist rule #1: nothing is rounded. Utilities still win on specificity. */
+*,
+::before,
+::after {
+  border-radius: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-accent-200);
+  color: var(--color-ink);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-n-300) transparent;
+}
+
+/* 9.5px uppercase caption used for every field label and column header. */
+.rp-micro {
+  font-size: 9.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: color-mix(in srgb, var(--color-ink) 50%, transparent);
+}
+
+.rp-micro-accent {
+  font-size: 9.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+}
+
+/* Faint graph-paper backdrop behind the canvas. */
+.rp-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, #201e1d 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, #201e1d 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 26px 26px;
+}
+
+/* Marching ants along an impacted supply path. */
+@keyframes rp-dash {
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+
+@keyframes rp-fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+.rp-pulse {
+  animation: rp-fade 2s ease-in-out infinite;
+}
+
+@keyframes rp-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rp-in {
+  animation: rp-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

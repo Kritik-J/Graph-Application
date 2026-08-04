@@ -42,3 +42,6 @@ next-env.d.ts
 
 # oh-my-claudecode state
 .omc/
+
+# assignment brief (not for the public repo)
+docs/assignment.pdf
