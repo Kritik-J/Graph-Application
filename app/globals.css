@@ -1,30 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ripple — "Modernist" palette */
-  --color-paper: #f3f2f2;
-  --color-surface: #eae9e9;
-  --color-ink: #201e1d;
+  /* Ripple — natural cocoa palette: cream paper, espresso ink,
+     terracotta signal (earthy, but still reads as "alert"). */
+  --color-paper: #f6f1e7;
+  --color-surface: #ece4d6;
+  --color-ink: #2a2018;
 
-  --color-accent: #ec3013;
-  --color-accent-700: #ae1800;
-  --color-accent-200: #ffe0d9;
-  --color-accent-100: #fff2ef;
+  --color-accent: #b0562b;
+  --color-accent-700: #8a3d1a;
+  --color-accent-200: #f0d9c9;
+  --color-accent-100: #f9efe6;
 
-  --color-n-50: #f8f4f4;
-  --color-n-100: #eae7e7;
-  --color-n-200: #d7d3d3;
-  --color-n-300: #bab6b6;
-  --color-n-400: #9b9797;
-  --color-n-500: #7d7979;
-  --color-n-600: #605d5d;
-  --color-n-700: #444141;
-  --color-n-800: #2d2b2b;
+  --color-n-50: #f9f5ee;
+  --color-n-100: #efe8dc;
+  --color-n-200: #ded3c2;
+  --color-n-300: #c2b5a2;
+  --color-n-400: #a29584;
+  --color-n-500: #837767;
+  --color-n-600: #665c4e;
+  --color-n-700: #4a4238;
+  --color-n-800: #2f2922;
 
-  --color-ok: #1f7a4d;
+  --color-ok: #4f7b52;
 
   /* Every structural line in the UI resolves to this. */
-  --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
+  --color-divider: color-mix(in srgb, #2a2018 40%, transparent);
 
   --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
 }
@@ -74,12 +75,12 @@ body {
   background-image:
     linear-gradient(
       to right,
-      color-mix(in srgb, #201e1d 6%, transparent) 1px,
+      color-mix(in srgb, #2a2018 6%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       to bottom,
-      color-mix(in srgb, #201e1d 6%, transparent) 1px,
+      color-mix(in srgb, #2a2018 6%, transparent) 1px,
       transparent 1px
     );
   background-size: 26px 26px;
